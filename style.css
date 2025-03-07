@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    margin-bottom: 40px;
+}
+
+header nav {
+    display: none;
+    gap: 30px;
+    margin-right: 15px;
+}
+
+header nav a {
+    color: #fff;
+}
+
+header nav a:hover {
+    color: #ffffff7b;
+}
+
+header span {
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+header span:hover {
+    color: #ffffff7b;
+}
+
+main, #produtos, #vantagens, #contato, aside {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    margin-bottom: 60px;
+    width: 400px;
+}
+
+.main-info, .produtos-info, .vantagens-info, .contato-info, .aside-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #7a7a7a;
+    line-height: 1.4em;
+}
+
+.main-info h1, .produtos-info h2, .vantagens-info h2, .contato-info h2, .aside-info h2 {
+    color: #000;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+}
+
+.main-img img, .produtos-img img, .vantagens-img img, .aside-img img {
+    max-width: 400px;
+    border-radius: 5px;
+}
+
+.produtos-info > div {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.produtos-info > div a, .contato-submit {
+    background-color: #000;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.produtos-info > div a:hover, .contato-submit:hover {
+    background-color: #7a7a7a;
+}
+
+#vantagens strong {
+    color: #000;
+}
+
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;   
+}
+
+.contato-form input {
+    width: 100%;
+}
+
+.contato-submit {
+    font-size: 1em;
+    font-weight: 100;
+    max-width: 100px;
+    align-self: end;
+    border: none;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+@media (min-width: 768px) {
+    header nav {
+        display: flex;
+    }
+    header span {
+        display: none;
+    }
+    main, #produtos, #vantagens, #contato, aside {
+        width: 700px;
+        gap: 40px;
+    }
+    .main-img img, .produtos-img img, .vantagens-img img, .aside-img img {
+        max-height: 400px;
+    }
+    .vantagens-img img {
+        width: 300px;
+    }
+    main, #vantagens {
+        flex-direction: row;
+    }
+    #produtos {
+        flex-direction: row-reverse;
+    }
+    .contato-info, .contato-form, .aside-info {
+        max-width: 600px;
+    }
+    .contato-form label textarea {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    main, #produtos, #vantagens, #contato, aside {
+        width: 1000px;
+        gap: 40px;
+    }
+    aside {
+        flex-direction: row-reverse;
+    }
+    .produtos-info > div {
+        justify-content: center;
+        gap: 20px;
+    }
+}
